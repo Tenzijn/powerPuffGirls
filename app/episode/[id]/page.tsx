@@ -1,4 +1,5 @@
 import { fetchEpisodeDetails } from '@/api/api';
+import EpisodeDetail from '@/components/episodeDetail/EpisodeDetail';
 
 export default async function EpisodePage({
   params: { id },
@@ -8,5 +9,5 @@ export default async function EpisodePage({
   console.log('id:', id);
   const episode = await fetchEpisodeDetails(id);
 
-  return <></>;
+  return <EpisodeDetail episode={episode} />;
 }
