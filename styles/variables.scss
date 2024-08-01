@@ -1,0 +1,36 @@
+// Description: Variables for the project
+
+// Colors
+$primary-color: #ff69b4;
+$secondary-color: #00bfff;
+$tertiary-color: #7fff00;
+$black: #000000;
+$white: #ffffff;
+$light-grey: #f5f5f5;
+$yellow: #ffff00;
+$red: #ff0000;
+
+//images
+$background-image: url('../public/background.jpg');
+
+// Font
+$font-family: 'Roboto', sans-serif;
+
+//breakpoints
+$breakpoints: (
+  'xs': 'max-width: 575px',
+  'sm': '(min-width: 576px)',
+  'md': '(min-width: 768px)',
+  'lg': '(min-width: 992px)',
+  'xl': 'min-width: 1200px',
+);
+
+//z-index
+$z-index: (
+  'header': 100,
+  'modal': 200,
+  'backdrop': 300,
+  'drawer': 400,
+  'notification': 500,
+  'tooltip': 600,
+);

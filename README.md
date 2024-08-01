@@ -79,7 +79,7 @@ _Below is an example of how you can instruct your audience on installing and set
 1. Get a free API Key at [https://example.com](https://example.com)
 2. Clone the repo
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   https://github.com/Tenzijn/powerPuffGirls.git
    ```
 3. Install NPM packages
    ```sh
@@ -88,6 +88,10 @@ _Below is an example of how you can instruct your audience on installing and set
 4. Enter your API in `config.js`
    ```js
    const API_KEY = 'ENTER YOUR API';
+   ```
+5. Run the app
+   ```sh
+    npm run dev
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -121,6 +125,8 @@ Tenzin Kunchok - tenzin@tibet.dev
 <!-- ACKNOWLEDGMENTS -->
 
 ## Acknowledgments
+
+- [API](https://api.tvmaze.com)
 
 - [Choose an Open Source License](https://choosealicense.com)
 - [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
