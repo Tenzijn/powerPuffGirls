@@ -1,5 +1,41 @@
+@import 'variables';
+@import 'mixins';
+
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+body {
+  font-family: $font-family;
+}
+
+button {
+  cursor: pointer;
+}
+
+.error {
+  text-align: center;
+
+  &__header {
+    font-size: 3rem;
+    margin: 0px;
+    font-weight: 900;
+    color: $tertiary-color;
+    text-transform: uppercase;
+  }
+
+  &__message {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: $font-color-light;
+  }
+
+  @include breakpoint('xs') {
+    padding: 0 1rem;
+    &__header {
+      font-size: 2rem;
+    }
+  }
 }

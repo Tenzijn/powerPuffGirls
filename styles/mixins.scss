@@ -1,0 +1,18 @@
+@import 'variables';
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin breakpoint($size) {
+  $my-map: map-get($breakpoints, $size);
+  @if $my-map {
+    @media screen and (#{$my-map}) {
+      @content;
+    }
+  } @else {
+    @warn 'Invalid breakpoint';
+  }
+}
