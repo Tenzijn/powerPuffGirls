@@ -1,0 +1,36 @@
+@import '@/styles/mixins.scss';
+
+.image {
+  @include breakpoint('xs') {
+    width: 400px;
+    height: 250px;
+  }
+
+  @include breakpoint('sm') {
+    width: 500px;
+    height: 300px;
+  }
+
+  @include breakpoint('md') {
+    width: 600px;
+    height: 400px;
+  }
+
+  @include breakpoint('lg') {
+    width: 700px;
+    height: 450px;
+  }
+
+  @include breakpoint('xl') {
+    width: 800px;
+    height: 500px;
+  }
+
+  position: relative;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.01);
+    transition: all 0.5s linear 0.2s;
+  }
+}
