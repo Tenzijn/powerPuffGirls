@@ -3,7 +3,7 @@ import axios from 'axios';
 const API_URL = 'https://api.tvmaze.com';
 
 export const fetchShowDetails = async (showId: number) => {
-  const response = await axios.get(`${API_URL}/shows/${showId}`);
+  const response = await axios.get(`${API_URL}/shows/${showId}?embed=episodes`);
   return response.data;
 };
 
