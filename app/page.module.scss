@@ -1,12 +1,74 @@
 @import '../styles/variables.scss';
 @import '../styles/mixins.scss';
 
-.container {
+.welcome {
+  background-image: $background-image;
+  background-size: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
   width: 100%;
-  background-color: $primary-color;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.35);
+    z-index: -1;
+  }
+
+  &__image {
+    width: 500px;
+    height: 300px;
+    position: relative;
+  }
+
+  &__image:hover {
+    transform: scale(1.01);
+    transition: all 0.5s linear 0.2s;
+  }
+
+  &__header {
+    position: relative;
+    font-size: 3rem;
+    margin: 0px;
+    font-weight: 900;
+    color: $white;
+    text-transform: uppercase;
+  }
+
+  &__info {
+    position: absolute;
+    bottom: 1rem;
+    margin-top: 1rem;
+    color: $light-grey;
+    border: 1px solid $light-grey;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+
+    &__header {
+      font-size: 2rem;
+      margin: 0px;
+      font-weight: 900;
+      text-transform: uppercase;
+      border-bottom: 1px solid $light-grey;
+    }
+
+    &__text {
+      font-size: 1.3rem;
+      font-weight: 500;
+      line-height: 1.3;
+      margin-top: 1rem;
+    }
+  }
 }
