@@ -6,7 +6,6 @@ export default async function EpisodePage({
 }: {
   params: { id: number };
 }) {
-  console.log('id:', id);
   const episode = await fetchEpisodeDetails(id);
 
   return <EpisodeDetail episode={episode} />;

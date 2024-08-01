@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import styles from './ShowDetail.module.scss';
 import Link from 'next/link';
 
@@ -16,7 +15,6 @@ const ShowDetail: React.FC<{ show: Show; episodes: Episodes }> = ({
   show,
   episodes,
 }) => {
-  // console.log(episodes);
   return (
     <>
       <h1>{show.name}</h1>
