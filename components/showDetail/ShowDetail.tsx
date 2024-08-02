@@ -1,7 +1,7 @@
-'use client';
-import { useEffect, useState } from 'react';
-import styles from './ShowDetail.module.scss';
+import classes from './ShowDetail.module.scss';
 import Link from 'next/link';
+import Image from 'next/image';
+import LinkButton from '../button/LinkButton';
 
 type Episodes = {
   id: number;
@@ -21,26 +21,50 @@ type Show = {
 };
 
 const ShowDetail: React.FC<{ show: Show }> = ({ show }) => {
-  const [loading, setLoading] = useState(true);
-  useEffect(() => {
-    setLoading(false);
-  }, []);
-
+  console.log(show);
   return (
-    <>
-      <h1>{show.name}</h1>
-      <p>{show.summary}</p>
-      <img src={show.image.original} alt={show.name} />
-      <ul>
-        {show._embedded.episodes.map((episode) => (
-          <li key={episode.id}>
-            <Link href={`/episode/${episode.id}`}>
-              {episode.name} - Season {episode.season}
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </>
+    <section className={classes.showSection}>
+      <div className={classes.showDetail}>
+        <div className={classes.showDetail__container}>
+          <div className={classes.showDetail__image}>
+            <Image
+              src={show.image.original}
+              alt={show.name}
+              width={400}
+              height={600}
+              layout='responsive'
+            />
+          </div>
+          <div className={classes.showDetail__info}>
+            <h1 className={classes.showDetail__info__title}>{show.name}</h1>
+            <ul className={classes.showDetail__info__genres}>
+              {show.genres.map((genres) => {
+                return (
+                  <li
+                    key={genres}
+                    className={classes.showDetail__info__genres__genre}
+                  >
+                    {genres}
+                  </li>
+                );
+              })}
+            </ul>
+            <div
+              dangerouslySetInnerHTML={{ __html: show.summary }}
+              className={classes.showDetail__info__summary}
+            ></div>
+            <a
+              href={show ? show.url : ''}
+              target='_blank'
+              rel='noreferrer'
+              className={classes.showDetail__info__button}
+            >
+              Visit Official Site
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
 

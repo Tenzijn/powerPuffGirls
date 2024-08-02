@@ -16,26 +16,95 @@ button {
 }
 
 .error {
+  background-image: $background-image;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   text-align: center;
+  overflow: hidden;
+  color: $light-grey;
 
   &__header {
-    font-size: 3rem;
-    margin: 0px;
-    font-weight: 900;
-    color: $tertiary-color;
     text-transform: uppercase;
   }
 
   &__message {
-    font-size: 1.5rem;
-    font-weight: 500;
-    color: $light-grey;
+    opacity: 0.5;
   }
 
   @include breakpoint('xs') {
-    padding: 0 1rem;
+    &__image {
+      height: 30%;
+    }
+
     &__header {
       font-size: 2rem;
+      font-weight: 900;
+      margin-top: 1rem;
+    }
+
+    &__message {
+      font-size: 1.2rem;
+      font-weight: 500;
+    }
+  }
+
+  @include breakpoint('sm') {
+    &__image {
+      height: 40%;
+    }
+
+    &__header {
+      font-size: 2.5rem;
+    }
+
+    &__message {
+      font-size: 1.5rem;
+    }
+  }
+
+  @include breakpoint('md') {
+    &__image {
+      height: 50%;
+    }
+
+    &__header {
+      font-size: 3rem;
+    }
+
+    &__message {
+      font-size: 1.8rem;
+    }
+  }
+
+  @include breakpoint('lg') {
+    &__image {
+      height: 60%;
+    }
+
+    &__header {
+      font-size: 3.5rem;
+    }
+
+    &__message {
+      font-size: 2rem;
+    }
+  }
+
+  @include breakpoint('xl') {
+    &__image {
+      height: 70%;
+    }
+
+    &__header {
+      font-size: 4rem;
+    }
+
+    &__message {
+      font-size: 2.2rem;
     }
   }
 }

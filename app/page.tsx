@@ -4,8 +4,8 @@ import LinkButton from '@/components/button/LinkButton';
 import HomeImage from '@/components/homeImage/HomeImage';
 
 export default function Home() {
-  // This is a hardcoded showId for the powerpuff girls show on TVMaze
-  // You can replace this with any showId you want to display
+  /* This is a hardcoded id for the powerpuff girls show on TVMaze
+     You can replace this with any showId you want to display  */
   const id = 6771;
 
   return (
