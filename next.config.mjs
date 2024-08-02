@@ -2,7 +2,14 @@
 
 const nextConfig = {
   images: {
-    domains: ['static.tvmaze.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'static.tvmaze.com',
+        port: '',
+        pathname: '/**',
+      },
+    ],
   },
 };
 
