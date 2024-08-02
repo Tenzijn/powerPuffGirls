@@ -83,7 +83,10 @@ const ShowDetail: React.FC<{ show: Show }> = ({ show }) => {
         </div>
       </section>
       <section className={classes.episodesSection} id='episode'>
-        <h2 className={classes.episodesSection__title}>Episodes</h2>
+        <h2 className={classes.episodesSection__title}>
+          {' '}
+          ✨ Seasons & Episodes ✨
+        </h2>
         <div className={classes.episodesSection__episodesContainer}>
           {show._embedded.episodes.map((episode) => {
             return <EpisodeCard key={episode.id} {...episode} />;

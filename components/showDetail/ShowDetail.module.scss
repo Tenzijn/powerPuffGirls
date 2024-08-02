@@ -2,12 +2,13 @@
 @import '../../styles/mixins.scss';
 
 //Images
-$background-image: url('../../public/background-movie.jpg');
+$background-image-movie: url('../../public/background-movie.jpg');
+$background-image: url('../../public/background.jpg');
 
 .showDetail {
   height: 100dvh;
   position: relative;
-  background-image: $background-image;
+  background-image: $background-image-movie;
   background-size: cover;
   background-position: center;
   display: flex;
@@ -158,9 +159,16 @@ $background-image: url('../../public/background-movie.jpg');
 }
 
 .episodesSection {
-  margin: 1rem;
+  padding: 1rem;
+  background: linear-gradient(
+    0deg,
+    rgba(23, 23, 23, 0.48082983193277307) 0%,
+    rgba(0, 0, 0, 1) 99%,
+    rgba(0, 0, 0, 1) 100%
+  );
 
   &__title {
+    color: $white;
     font-size: 2rem;
     font-weight: bold;
     text-align: center;
