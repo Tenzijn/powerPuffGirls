@@ -1,11 +1,14 @@
-import classes from './Navbar.module.scss';
 import Image from 'next/image';
+import Link from 'next/link';
+
 import Logo from '@/public/logo.png';
+
+import classes from './Navbar.module.scss';
 
 const Navbar = () => {
   return (
     <nav className={classes.navbar}>
-      <div className={classes.navbar__logo}>
+      <Link href={'/'} className={classes.navbar__logo}>
         <Image
           src={Logo}
           alt='logo'
@@ -15,7 +18,7 @@ const Navbar = () => {
             objectPosition: 'left',
           }}
         />
-      </div>
+      </Link>
     </nav>
   );
 };

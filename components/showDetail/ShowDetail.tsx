@@ -1,8 +1,9 @@
-import classes from './ShowDetail.module.scss';
 import Image from 'next/image';
 import Episodes from '../episodes/Episodes';
 import DownArrow from '../downArrow/DownArrow';
 import { SecondaryBtn } from '../buttons/Buttons';
+
+import classes from './ShowDetail.module.scss';
 
 type Episodes = {
   id: number;
@@ -17,11 +18,11 @@ type Episodes = {
 type Show = {
   name: string;
   summary: string;
+  genres: string[];
+  url: string;
   image: {
     original: string;
   };
-  genres: string[];
-  url: string;
   _embedded: {
     episodes: Episodes[];
   };
