@@ -1,0 +1,33 @@
+@import '../../styles/mixins.scss';
+@import '../../styles/variables.scss';
+
+.episodesSection {
+  padding: 1rem;
+  background: linear-gradient(
+    0deg,
+    rgba(23, 23, 23, 0.48082983193277307) 0%,
+    rgba(0, 0, 0, 1) 99%,
+    rgba(0, 0, 0, 1) 100%
+  );
+
+  &__title {
+    color: $white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__episodesContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    padding: 20px;
+  }
+
+  &__button {
+    @include button;
+    margin: 1rem auto;
+  }
+}
