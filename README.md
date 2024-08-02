@@ -39,20 +39,25 @@
 
 <!-- ABOUT THE PROJECT -->
 
-## About The Project
+## About The Project 🚀
 
-![Powerpuff Girls](./public/powerpuff-Screenshot.png)
+![Powerpuff Girls](./public/Screenshot-1.png)
 
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+This is web application about The Powerpuff Girls. The app is built using NextJs and uses the TVMaze API to fetch the data. The app has the following features:
+
+- Modern UI with a responsive design
+- Display all the episodes of the Powerpuff Girls.
+- Get details of each episode by clicking on the episode card.
+- Search for episodes by name.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Built With
+### Built With 🛠 ️
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-
-- [![Next][Next.js]][Next-url]
-- [![React][React.js]][React-url]
+- NextJs
+- Sass
+- Axios
+- Jest & React Testing Library
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -60,12 +65,15 @@ This section should list any major frameworks/libraries used to bootstrap your p
 
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
+You need to have the following installed on your machine:
+
+- node
+
+  ```sh
+  node --version
+  ```
 
 - npm
   ```sh
@@ -74,35 +82,20 @@ This is an example of how to list things you need to use the software and how to
 
 ### Installation
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
+This app is built using NextJs, so you need to have NodeJs installed on your machine. Here's how you can get started:
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repo
    ```sh
    https://github.com/Tenzijn/powerPuffGirls.git
    ```
-3. Install NPM packages
+2. Install NPM packages
    ```sh
    npm install
    ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
-5. Run the app
+3. Run the app
    ```sh
     npm run dev
    ```
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- USAGE EXAMPLES -->
-
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -110,7 +103,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 ## License
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+Distributed under the MIT License. You can use this without any restrictions.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -124,17 +117,14 @@ Tenzin Kunchok - tenzin@tibet.dev
 
 <!-- ACKNOWLEDGMENTS -->
 
+## More Images
+
+![Screenhot-2](./public/Screenshot-2.png)
+
+![Screenhot-3](./public/Screenshot-3.png)
+
 ## Acknowledgments
 
-- [API](https://api.tvmaze.com)
-
-- [Choose an Open Source License](https://choosealicense.com)
-- [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-- [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-- [Malven's Grid Cheatsheet](https://grid.malven.co/)
-- [Img Shields](https://shields.io)
-- [GitHub Pages](https://pages.github.com)
-- [Font Awesome](https://fontawesome.com)
-- [React Icons](https://react-icons.github.io/react-icons/search)
+- [API - tvmaze.com](https://api.tvmaze.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
