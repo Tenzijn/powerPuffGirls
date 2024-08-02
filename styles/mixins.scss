@@ -67,3 +67,8 @@
     transform: translateY(-10px);
   }
 }
+
+@mixin scaleUp($size: 1.05) {
+  transform: scale($size);
+  transition: all 0.3s;
+}
