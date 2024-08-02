@@ -31,8 +31,11 @@ const ShowDetail: React.FC<{ show: Show }> = ({ show }) => {
   console.log(show._embedded.episodes[0]);
   return (
     <>
-      <section className={classes.showSection}>
-        <div className={classes.showDetail}>
+      <section
+        className={classes.showSection}
+        style={{ backgroundColor: 'red' }}
+      >
+        <div className={classes.showDetail} style={{ backgroundColor: 'red' }}>
           <div className={classes.showDetail__container}>
             <div className={classes.showDetail__image}>
               <Image
