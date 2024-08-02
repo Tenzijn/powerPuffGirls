@@ -1,6 +1,6 @@
 import classes from './page.module.scss';
 import powerpuff from '@/public/powerpuffGirls.png';
-import LinkButton from '@/components/button/LinkButton';
+import { PrimaryBtn } from '@/components/buttons/Buttons';
 import HomeImage from '@/components/homeImage/HomeImage';
 
 export default function Home() {
@@ -16,7 +16,7 @@ export default function Home() {
           desc='Powerpuff girls'
           url={`/show/${id}`}
         />
-        <LinkButton text={`Let's Fly`} url={`/show/${id}`} />
+        <PrimaryBtn text={`Let's Fly`} url={`/show/${id}`} />
       </div>
     </main>
   );
