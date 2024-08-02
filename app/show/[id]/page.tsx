@@ -12,6 +12,10 @@ export default async function ShowPage({
   if (!id || parseInt(id) !== 6771) {
     return notFound();
   }
-  const show = await fetchShowDetails(parseInt(id));
-  return <ShowDetail show={show} />;
+  try {
+    const show = await fetchShowDetails(parseInt(id));
+    return <ShowDetail show={show} />;
+  } catch (error) {
+    return notFound();
+  }
 }
