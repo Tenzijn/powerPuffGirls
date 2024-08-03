@@ -13,6 +13,8 @@ const Navbar = () => {
           src={Logo}
           alt='logo'
           fill
+          sizes='(width: 300px, height: 80px)'
+          priority
           style={{
             objectFit: 'contain',
             objectPosition: 'left',

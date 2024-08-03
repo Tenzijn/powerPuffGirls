@@ -46,6 +46,7 @@ const EpisodeDetail: React.FC<EpisodeDetailProps> = ({ episode }) => {
             src={episode.image.original ? episode.image.original : placeHolder}
             alt='background'
             fill
+            sizes='100vw'
             style={{ objectFit: 'cover', objectPosition: 'center' }}
           />
           <div className={classes.episodeDetail__container}>
@@ -56,6 +57,7 @@ const EpisodeDetail: React.FC<EpisodeDetailProps> = ({ episode }) => {
                 }
                 alt={episode.name}
                 fill
+                sizes='(width: 400px, height: 250px)'
                 style={{ objectFit: 'cover', objectPosition: 'center' }}
               />
             </div>

@@ -10,11 +10,15 @@ type HomeImageProps = {
 
 const HomeImage = ({ imgLink, desc, url }: HomeImageProps) => {
   return (
-    <div className={classes.image}>
-      <Link href={url} className={classes.button}>
-        <Image src={imgLink} alt={desc} fill />
-      </Link>
-    </div>
+    <Link href={url} className={classes.image}>
+      <Image
+        fill
+        src={imgLink}
+        alt={desc}
+        sizes='(width: 800px, height: 500px)'
+        loading='lazy'
+      />
+    </Link>
   );
 };
 

@@ -15,6 +15,8 @@ const DownArrow = ({ id }: DownArrowProps) => {
         <Image
           src={downArrow}
           alt='down arrow'
+          loading='lazy'
+          sizes='(width: 50px, height: 50px)'
           className={classes.downArrow__image}
         />
       </Link>

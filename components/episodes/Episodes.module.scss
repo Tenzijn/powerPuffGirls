@@ -2,7 +2,6 @@
 @import '../../styles/variables.scss';
 
 .episodesSection {
-  padding: 1rem;
   background: linear-gradient(
     0deg,
     rgba(23, 23, 23, 0.48082983193277307) 0%,
@@ -23,7 +22,7 @@
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
     justify-items: center;
-    padding: 20px;
+    padding: 1rem;
   }
 
   &__button {
