@@ -1,11 +1,7 @@
-'use client';
-import React, { useContext } from 'react';
 import Image from 'next/image';
 import Episodes from '../episodes/Episodes';
 import DownArrow from '../downArrow/DownArrow';
 import { SecondaryBtn } from '../buttons/Buttons';
-
-import { PowerpuffContext } from '@/context/PowerpuffContext';
 
 import classes from './ShowDetail.module.scss';
 
@@ -32,21 +28,14 @@ type Show = {
   };
 };
 
-const ShowDetail: React.FC = () => {
-  const context = useContext(PowerpuffContext);
-
-  const shows: Show = context.shows;
-  const episodes: Episodes[] = context.episodes;
-  const getShows = context.getShows;
-  const getEpisodes = context.getEpisodes;
-
+const ShowDetail: React.FC<{ show: Show }> = ({ show }) => {
   return (
     <>
       <section className={classes.showSection}>
         <div className={classes.showDetail}>
           <Image
             className={classes.showDetail__background}
-            src={shows?.image.original}
+            src={show.image.original}
             alt='background'
             fill
             style={{ objectFit: 'cover', objectPosition: 'center' }}
@@ -54,16 +43,16 @@ const ShowDetail: React.FC = () => {
           <div className={classes.showDetail__container}>
             <div className={classes.showDetail__image}>
               <Image
-                src={shows?.image.original}
-                alt={shows?.name}
+                src={show.image.original}
+                alt={show.name}
                 fill
                 style={{ objectFit: 'cover', objectPosition: 'center' }}
               />
             </div>
             <div className={classes.showDetail__info}>
-              <h1 className={classes.showDetail__info__title}>{shows?.name}</h1>
+              <h1 className={classes.showDetail__info__title}>{show.name}</h1>
               <ul className={classes.showDetail__info__genres}>
-                {shows?.genres.map((genres) => {
+                {show.genres.map((genres) => {
                   return (
                     <li
                       key={genres}
@@ -75,10 +64,10 @@ const ShowDetail: React.FC = () => {
                 })}
               </ul>
               <div
-                dangerouslySetInnerHTML={{ __html: shows?.summary }}
+                dangerouslySetInnerHTML={{ __html: show.summary }}
                 className={classes.showDetail__info__summary}
               ></div>
-              <SecondaryBtn text='Watch Now' url={shows?.url} />
+              <SecondaryBtn text='Watch Now' url={show.url} />
             </div>
           </div>
           <DownArrow id='#episode' />
@@ -86,7 +75,7 @@ const ShowDetail: React.FC = () => {
       </section>
 
       {/* Displaying all the Episodes */}
-      <Episodes show={shows} />
+      <Episodes show={show} />
     </>
   );
 };
