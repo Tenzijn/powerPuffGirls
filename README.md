@@ -20,8 +20,7 @@
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
+         <li><a href="#build-with">Build With</a></li>
     </li>
     <li>
       <a href="#getting-started">Getting Started</a>
@@ -39,7 +38,7 @@
 
 <!-- ABOUT THE PROJECT -->
 
-## About The Project 🚀
+## About The Project
 
 ![Powerpuff Girls](./public/Screenshot-1.png)
 
@@ -52,12 +51,12 @@ This is web application about The Powerpuff Girls. The app is built using NextJs
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Built With 🛠 ️
+## Build With ️
 
-- NextJs
-- Sass
-- Axios
-- Jest & React Testing Library
+- [NextJs](https://nextjs.org/)
+- [Sass](https://sass-lang.com/)
+- [Axios](https://axios-http.com/)
+- [Jest & React Testing Library](https://testing-library.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -95,6 +94,14 @@ This app is built using NextJs, so you need to have NodeJs installed on your mac
 3. Run the app
    ```sh
     npm run dev
+   ```
+4. Open the app in your browser
+   ```sh
+    http://localhost:3000
+   ```
+5. Run tests
+   ```sh
+     npm run test
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

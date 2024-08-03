@@ -6,7 +6,7 @@ import classes from './page.module.scss';
 export default async function ShowPage() {
   return (
     <PowerpuffProvider>
-      <ShowDetail />;
+      <ShowDetail />
     </PowerpuffProvider>
   );
 }
