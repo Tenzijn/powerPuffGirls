@@ -4,27 +4,30 @@
 .navbar {
   position: absolute;
   z-index: 100;
-  cursor: pointer;
 
-  @include breakpoint('xs') {
-    height: 60px;
-    width: 200px;
-    margin-left: 1rem;
-    top: 1rem;
-  }
+  &__logo {
+    position: absolute;
 
-  @include breakpoint('sm') {
-    height: 70px;
-    width: 250px;
-    margin-left: 1.5rem;
-    top: 1.5rem;
-  }
+    @include breakpoint('xs') {
+      height: 60px;
+      width: 200px;
+      margin-left: 1rem;
+      top: 1rem;
+    }
 
-  @include breakpoint('md') {
-    height: 80px;
-    width: 300px;
-    margin-left: 2rem;
-    top: 2rem;
+    @include breakpoint('sm') {
+      height: 70px;
+      width: 250px;
+      margin-left: 1.5rem;
+      top: 1.5rem;
+    }
+
+    @include breakpoint('md') {
+      height: 80px;
+      width: 300px;
+      margin-left: 2rem;
+      top: 2rem;
+    }
   }
 
   &:hover {

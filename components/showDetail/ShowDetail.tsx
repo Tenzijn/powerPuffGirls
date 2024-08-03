@@ -42,10 +42,12 @@ const ShowDetail: React.FC = () => {
       <section className={classes.showSection}>
         <div className={classes.showDetail}>
           <Image
+            fill
             className={classes.showDetail__background}
             src={shows?.image.original}
             alt='background'
-            fill
+            sizes='100vw'
+            loading='lazy'
             style={{ objectFit: 'cover', objectPosition: 'center' }}
           />
           <div className={classes.showDetail__container}>
@@ -54,6 +56,8 @@ const ShowDetail: React.FC = () => {
                 src={shows?.image.original}
                 alt={shows?.name}
                 fill
+                sizes='(width: 300px, height: 400px)'
+                loading='lazy'
                 style={{ objectFit: 'cover', objectPosition: 'center' }}
               />
             </div>
