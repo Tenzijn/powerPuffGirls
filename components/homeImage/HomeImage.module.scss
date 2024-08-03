@@ -1,6 +1,8 @@
 @import '@/styles/mixins.scss';
 
 .image {
+  position: relative;
+
   @include breakpoint('xs') {
     width: 400px;
     height: 250px;
