@@ -41,30 +41,35 @@ const ShowDetail: React.FC = () => {
     <>
       <section className={classes.showSection}>
         <div className={classes.showDetail}>
-          <Image
-            fill
-            className={classes.showDetail__background}
-            src={shows?.image.original}
-            alt='background'
-            sizes='100vw'
-            loading='lazy'
-            style={{ objectFit: 'cover', objectPosition: 'center' }}
-          />
+          {shows.image.original && (
+            <Image
+              src={shows.image.original}
+              className={classes.showDetail__background}
+              alt='background'
+              sizes='100vw'
+              fill
+              loading='lazy'
+              style={{ objectFit: 'cover', objectPosition: 'center' }}
+            />
+          )}
           <div className={classes.showDetail__container}>
             <div className={classes.showDetail__image}>
-              <Image
-                src={shows?.image.original}
-                alt={shows?.name}
-                fill
-                sizes='(width: 300px, height: 400px)'
-                loading='lazy'
-                style={{ objectFit: 'cover', objectPosition: 'center' }}
-              />
+              {shows.image.original && (
+                <Image
+                  src={shows.image.original}
+                  alt={shows.name}
+                  fill
+                  sizes='(width: 300px, height: 400px)'
+                  priority
+                  style={{ objectFit: 'cover', objectPosition: 'center' }}
+                />
+              )}
+              ;
             </div>
             <div className={classes.showDetail__info}>
-              <h1 className={classes.showDetail__info__title}>{shows?.name}</h1>
+              <h1 className={classes.showDetail__info__title}>{shows.name}</h1>
               <ul className={classes.showDetail__info__genres}>
-                {shows?.genres.map((genres) => {
+                {shows.genres.map((genres) => {
                   return (
                     <li
                       key={genres}
