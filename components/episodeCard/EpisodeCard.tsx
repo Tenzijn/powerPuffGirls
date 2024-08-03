@@ -21,9 +21,11 @@ const EpisodeCard = ({ id, name, image, season, number }: Episodes) => {
         <div className={classes.episode__Card}>
           <div className={classes.episode__card__image}>
             <Image
+              fill
               src={image ? image.original : placeholder}
               alt={name}
-              fill
+              sizes='(width: 300px, height: 200px)'
+              loading='lazy'
               style={{ objectFit: 'cover', objectPosition: 'center' }}
             />
           </div>
