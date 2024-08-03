@@ -36,9 +36,6 @@ const ShowDetail: React.FC = () => {
   const context = useContext(PowerpuffContext);
 
   const shows: Show = context.shows;
-  const episodes: Episodes[] = context.episodes;
-  const getShows = context.getShows;
-  const getEpisodes = context.getEpisodes;
 
   return (
     <>

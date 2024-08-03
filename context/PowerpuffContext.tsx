@@ -1,13 +1,6 @@
 'use client';
-import React, {
-  createContext,
-  useState,
-  useEffect,
-  ReactNode,
-  use,
-} from 'react';
+import React, { createContext, useState, useEffect, ReactNode } from 'react';
 import axios from 'axios';
-import { get } from 'http';
 
 type showType = {
   id: number;
@@ -34,24 +27,9 @@ type episodesType = {
   };
 };
 
-type episodeType = {
-  id: number;
-  name: string;
-  season: number;
-  number: number;
-  summary: string;
-  image: {
-    original: string;
-  };
-};
-
 type PowerpuffContextType = {
   shows: showType;
-  episodes: episodesType[];
-  currentEpisode: episodeType;
   getShows: () => void;
-  getEpisodes: (id: number) => void;
-  getEpisode: (episodeId: number) => void;
 };
 
 const PowerpuffContext = createContext<PowerpuffContextType>({
@@ -79,20 +57,7 @@ const PowerpuffContext = createContext<PowerpuffContextType>({
       ],
     },
   },
-  currentEpisode: {
-    id: 0,
-    name: '',
-    season: 0,
-    number: 0,
-    summary: '',
-    image: {
-      original: '',
-    },
-  },
-  episodes: [],
   getShows: () => {},
-  getEpisodes: () => {},
-  getEpisode: () => {},
 });
 
 type PowerpuffProviderProps = {
@@ -125,26 +90,9 @@ const PowerpuffProvider = ({ children }: PowerpuffProviderProps) => {
     },
   });
 
-  const [episodes, setEpisodes] = useState<episodesType[]>([]);
-  const [currentEpisode, setCurrentEpisode] = useState<episodesType>({
-    id: 0,
-    name: '',
-    season: 0,
-    number: 0,
-    summary: '',
-    image: {
-      original: '',
-    },
-  });
-
   useEffect(() => {
     getShows();
-    getEpisodes(6771);
   }, []);
-
-  useEffect(() => {
-    console.log(episodes);
-  }, [episodes]);
 
   const getShows = async (id: number = 6771) => {
     try {
@@ -157,38 +105,11 @@ const PowerpuffProvider = ({ children }: PowerpuffProviderProps) => {
     }
   };
 
-  const getEpisodes = async (id: number) => {
-    try {
-      const response = await axios.get(
-        `https://api.tvmaze.com/shows/${id}/episodes`
-      );
-      setEpisodes(response.data);
-    } catch (error) {
-      throw new Error('404');
-    }
-  };
-
-  const getEpisode = async (episodeId: number) => {
-    console.log('called');
-    try {
-      const response = await axios.get(
-        `https://api.tvmaze.com/shows/episodes/${episodeId}`
-      );
-      setCurrentEpisode(response.data);
-    } catch (error) {
-      throw new Error('404');
-    }
-  };
-
   return (
     <PowerpuffContext.Provider
       value={{
         shows,
-        episodes,
-        currentEpisode,
         getShows,
-        getEpisodes,
-        getEpisode,
       }}
     >
       {children}
