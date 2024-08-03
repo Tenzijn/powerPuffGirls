@@ -20,8 +20,7 @@
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
-        <li><a href="#Build-With ️">Built With</a></li>
-      </ul>
+         <li><a href="#build-with">Build With</a></li>
     </li>
     <li>
       <a href="#getting-started">Getting Started</a>
@@ -54,10 +53,10 @@ This is web application about The Powerpuff Girls. The app is built using NextJs
 
 ## Build With ️
 
-- NextJs
-- Sass
-- Axios
-- Jest & React Testing Library
+- [NextJs](https://nextjs.org/)
+- [Sass](https://sass-lang.com/)
+- [Axios](https://axios-http.com/)
+- [Jest & React Testing Library](https://testing-library.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
