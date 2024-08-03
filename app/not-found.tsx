@@ -6,7 +6,13 @@ export default function NotFound() {
 
   return (
     <main className='error'>
-      <Image src={notFound} alt='404' className='error__image' />
+      <Image
+        src={notFound}
+        sizes='30vw'
+        priority
+        alt='404'
+        className='error__image'
+      />
       <h1 className='error__header'>OOPS! 404 Page Not Found</h1>
       <p className='error__message'>
         Sorry, the page you are looking for does not exist
