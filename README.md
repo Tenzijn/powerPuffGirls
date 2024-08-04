@@ -14,6 +14,7 @@
 <hr/>
 
 <!-- TABLE OF CONTENTS -->
+
 <details>
   <summary>Table of Contents</summary>
   <ol>
@@ -44,10 +45,10 @@
 
 This is web application about The Powerpuff Girls. The app is built using NextJs and uses the TVMaze API to fetch the data. The app has the following features:
 
-- Modern UI with a responsive design
+- Modern UI with a responsive design (
+  [Live Demo](https://powerpuffgirls.tibet.dev/) )
 - Display all the episodes of the Powerpuff Girls.
 - Get details of each episode by clicking on the episode card.
-- Search for episodes by name.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -57,6 +58,7 @@ This is web application about The Powerpuff Girls. The app is built using NextJs
 - [Sass](https://sass-lang.com/)
 - [Axios](https://axios-http.com/)
 - [Jest & React Testing Library](https://testing-library.com/)
+- [Hosted on Vercel](https://vercel.com/) - for deployment
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
