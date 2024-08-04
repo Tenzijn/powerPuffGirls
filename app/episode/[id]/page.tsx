@@ -13,7 +13,7 @@ export default async function EpisodePage({
     const episode = await fetchEpisodeDetails(id);
     return (
       <PowerpuffProvider>
-        <EpisodeDetail episode={episode} />;
+        <EpisodeDetail episode={episode} />
       </PowerpuffProvider>
     );
   } catch (error) {
