@@ -120,7 +120,7 @@ Distributed under the MIT License. You can use this without any restrictions.
 
 ## Contact
 
-Tenzin Kunchok - tenzin@tibet.dev
+Tenzin Kunchok - tenzinkunchok2022@gmail.com
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
