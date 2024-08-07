@@ -57,7 +57,7 @@ This is web application about The Powerpuff Girls. The app is built using NextJs
 - [NextJs](https://nextjs.org/)
 - [Sass](https://sass-lang.com/)
 - [Axios](https://axios-http.com/)
-- [Jest & React Testing Library](https://testing-library.com/)
+- [Jest & React Testing Library](https://testing-library.com/) - as writing Today (7th August 2024) there is unknown bug in "@testing-library/jest-dom" and react testing library which is causing the test to fail. So you must use the specific version of "@testing-library/jest-dom": "^5.16.5", to run the test.
 - [Hosted on Vercel](https://vercel.com/) - for deployment
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
