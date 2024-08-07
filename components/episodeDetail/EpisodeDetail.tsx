@@ -1,7 +1,11 @@
+'use client';
+import React, { useContext } from 'react';
 import Image from 'next/image';
 import DownArrow from '../downArrow/DownArrow';
 import { SecondaryBtn } from '../buttons/Buttons';
 import { notFound } from 'next/navigation';
+import Episodes from '../episodes/Episodes';
+import { PowerpuffContext } from '@/context/PowerpuffContext';
 
 import placeHolder from '../../public/placeholder.png';
 import classes from './EpisodeDetail.module.scss';
@@ -27,6 +31,10 @@ type EpisodeDetailProps = {
 };
 
 const EpisodeDetail: React.FC<EpisodeDetailProps> = ({ episode }) => {
+  const context = useContext(PowerpuffContext);
+
+  const shows = context.shows;
+
   // to prevent showing episode details of other shows
   if (episode._links.show.name !== 'The Powerpuff Girls') {
     notFound();
@@ -84,9 +92,12 @@ const EpisodeDetail: React.FC<EpisodeDetailProps> = ({ episode }) => {
               <SecondaryBtn text='Watch Now' url={episode.url} />
             </div>
           </div>
-          <DownArrow id='/show/6771#episode' />
+          <DownArrow id='#episode' />
         </div>
       </section>
+
+      {/* Displaying all the Episodes */}
+      <Episodes show={shows} />
     </>
   );
 };
