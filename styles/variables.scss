@@ -27,13 +27,3 @@ $breakpoints: (
   'lg': '(min-width: 992px)',
   'xl': 'min-width: 1200px',
 );
-
-//z-index
-$z-index: (
-  'header': 100,
-  'modal': 200,
-  'backdrop': 300,
-  'drawer': 400,
-  'notification': 500,
-  'tooltip': 600,
-);
