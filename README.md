@@ -6,9 +6,6 @@
 
   <h3 align="center">✨Powerpuff Girls✨</h3>
 
-  <p align="center">
-	Tech assignment for the role of Frontend Developer at RTL
-  </p>
 </div>
 
 <hr/>
